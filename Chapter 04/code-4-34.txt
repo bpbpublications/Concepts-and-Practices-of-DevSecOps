@@ -1,0 +1,23 @@
+# create a secret
+kubectl create secret generic db-user-pass --from-literal=username=myuser --from-literal=password=mypass
+
+# use the secret in a pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: myapp-container
+    image: myapp
+    env:
+      - name: DB_USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: db-user-pass
+            key: username
+      - name: DB_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: db-user-pass
+            key: password

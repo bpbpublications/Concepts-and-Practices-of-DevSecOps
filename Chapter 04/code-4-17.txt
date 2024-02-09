@@ -1,0 +1,1 @@
+docker run --cap-drop all --cap-add net_raw myimage ping localhost

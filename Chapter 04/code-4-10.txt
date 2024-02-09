@@ -1,0 +1,4 @@
+# pull the Clair image
+docker pull quay.io/coreos/clair
+# run Clair
+docker run -d -p 6060:6060 -p 6061:6061 quay.io/coreos/clair

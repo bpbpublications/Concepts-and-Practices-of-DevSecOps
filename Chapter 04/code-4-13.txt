@@ -1,0 +1,7 @@
+# initialize a new collection
+notary init myrepo/mycollection
+
+# add and sign a file
+notary add myrepo/mycollection myfile.txt
+# publish the collection
+notary publish myrepo/mycollection

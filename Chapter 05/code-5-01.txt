@@ -1,0 +1,10 @@
+import boto3
+iam = boto3.client('iam')
+response = iam.create_role(
+    RoleName='S3ReadAccessRole',
+    AssumeRolePolicyDocument='...',  # This would be the policy document that specifies who can assume the role
+)
+iam.attach_role_policy(
+    RoleName='S3ReadAccessRole',
+    PolicyArn='arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess',
+)

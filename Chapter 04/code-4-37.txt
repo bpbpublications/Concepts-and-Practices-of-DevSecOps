@@ -1,0 +1,2 @@
+# read a secret from vault
+vault kv get secret/myapp

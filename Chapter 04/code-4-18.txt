@@ -1,0 +1,4 @@
+curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-bionic-td-agent3.sh | sh
+Then, in our Docker container, set the: 
+Then, in our Docker container, set the log-driver toto fluentd:
+docker run --log-driver=fluentd ubuntu echo 'Hello Fluentd!'

@@ -1,0 +1,7 @@
+stages:
+  - test
+
+sonarqube_check:
+  stage: test
+  script:
+    - sonar-scanner -Dsonar.projectKey=my_project -Dsonar.sources=. -Dsonar.host.url=http://my-sonarqube.com

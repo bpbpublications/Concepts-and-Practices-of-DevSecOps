@@ -1,0 +1,4 @@
+# create a new cgroup and limit memory
+echo "1000000" > /sys/fs/cgroup/memory/mygroup/memory.limit_in_bytes
+# add a process to the cgroup
+echo $$ > /sys/fs/cgroup/memory/mygroup/cgroup.procs

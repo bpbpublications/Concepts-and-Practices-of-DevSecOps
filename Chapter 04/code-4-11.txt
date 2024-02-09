@@ -1,0 +1,4 @@
+# run Anchore Engine
+docker run -d --name anchore_engine -v /var/run/docker.sock:/var/run/docker.sock anchore/anchore-engine:latest
+# add an image to Anchore for analysis
+docker exec anchore_engine anchore-cli image add myrepo/myimage:latest

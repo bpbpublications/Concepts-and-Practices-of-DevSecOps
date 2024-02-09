@@ -1,0 +1,2 @@
+# Sysdig command to capture system state for later analysis
+$ sudo sysdig -w /tmp/capture.scap

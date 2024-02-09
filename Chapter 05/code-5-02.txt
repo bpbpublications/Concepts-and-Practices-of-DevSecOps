@@ -1,0 +1,4 @@
+# Store the secret
+vault kv put secret/myapp/db password="db-password"
+# Retrieve the secret
+vault kv get secret/myapp/db

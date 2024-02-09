@@ -1,0 +1,4 @@
+# add the Portieris Helm repo
+helm repo add portieris https://raw.githubusercontent.com/IBM/portieris/master/helm-repo/
+# install Portieris
+helm install portieris portieris/portieris --namespace portieris

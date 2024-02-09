@@ -1,0 +1,1 @@
+$ docker run -d --network=my-bridge-network --name=my-container my-image

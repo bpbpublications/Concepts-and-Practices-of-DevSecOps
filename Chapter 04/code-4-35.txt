@@ -1,0 +1,1 @@
+docker run -d -e "API_KEY=123456" myapp:latest

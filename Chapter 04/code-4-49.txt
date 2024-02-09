@@ -1,0 +1,4 @@
+trivy:
+  image: aquasec/trivy:latest
+  script:
+    - trivy image --severity HIGH,CRITICAL $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG

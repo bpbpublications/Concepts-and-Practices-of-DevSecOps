@@ -1,0 +1,2 @@
+kubectl set image deployment/my-app my-app=my-repo/my-app:latest
+kubectl rollout status deployment/my-app

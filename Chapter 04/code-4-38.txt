@@ -1,0 +1,1 @@
+echo "my_secret" | docker secret create my_secret -

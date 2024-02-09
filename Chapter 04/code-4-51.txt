@@ -1,0 +1,17 @@
+stages:
+  - build
+  - scan
+build:
+  stage: build
+  script:
+    - docker build -t my-image .
+    - docker save my-image | gzip > my-image.tar.gz
+  artifacts:
+    paths:
+      - my-image.tar.gz
+scan:
+  stage: scan
+  script:
+    - docker load < my-image.tar.gz
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $PWD:/root/result/ arminc/clair-scanner my-image
+  allow_failure: false

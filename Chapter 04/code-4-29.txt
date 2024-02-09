@@ -1,0 +1,1 @@
+$ docker service create --network=my-overlay-network --name=my-service my-image

@@ -1,0 +1,2 @@
+# create a new mount namespace
+unshare --mount /bin/bash

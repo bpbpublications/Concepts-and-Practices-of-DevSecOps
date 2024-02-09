@@ -1,0 +1,4 @@
+# enable Docker Content Trust
+export DOCKER_CONTENT_TRUST=1
+# push a signed image
+docker push myrepo/myimage:tag

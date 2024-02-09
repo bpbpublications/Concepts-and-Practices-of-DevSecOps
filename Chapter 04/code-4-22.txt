@@ -1,0 +1,5 @@
+- rule: Terminal shell in container
+  desc: A shell was used as an entrypoint/exec in a container.
+  condition: container_started and shell_procs
+  output: A shell was spawned in a container with an attached terminal (user=%user.name container_id=%container.id container_name=%container.name shell=%proc.name parent=%proc.pname cmdline=%proc.cmdline terminal=%proc.tty)
+  priority: WARNING

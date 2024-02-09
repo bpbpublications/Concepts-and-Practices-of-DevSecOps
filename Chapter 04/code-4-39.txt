@@ -1,0 +1,1 @@
+docker service create --name my_service --secret my_secret my_image

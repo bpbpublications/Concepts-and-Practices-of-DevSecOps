@@ -1,0 +1,4 @@
+# Write a secret to Vault
+vault kv put secret/myapp password="my_password"
+# Read the secret from Vault
+vault kv get secret/myapp

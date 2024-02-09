@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: myapp-container
+    image: myapp
+    env:
+      - name: DB_CONN_STRING
+        value: "jdbc:mysql://db.example.com:3306/mydb"
+      - name: DB_USER
+        valueFrom:
+          secretKeyRef:
+            name: db-user
+            key: username
+      - name: DB_PASS
+        valueFrom:
+          secretKeyRef:
+            name: db-pass
+            key: password

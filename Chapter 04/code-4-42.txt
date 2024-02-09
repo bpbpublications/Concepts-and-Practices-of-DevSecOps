@@ -1,0 +1,1 @@
+aws secretsmanager create-secret --name MyTestDatabaseSecret --secret-string '{"username":"testuser","password":"testpassword"}'
