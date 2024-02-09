@@ -1,2 +1,2 @@
-# Concepts and Practices of DevSecOps
- Concepts and Practices of DevSecOps, by BPB Publications
+# Cracking the DevSecOps Interview
+ Cracking the DevSecOps Interview, by BPB Publications
